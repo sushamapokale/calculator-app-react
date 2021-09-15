@@ -1,0 +1,61 @@
+.App{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.calculator{
+
+
+
+overflow: hidden;
+border-radius: 16px;
+width: 100%;
+max-width: 500px;
+}
+
+.display{
+    width: 100%;
+    max-width: 500px;
+    text-align: right;
+    padding: 16px;
+    background-color:black;
+    color: white;
+    font-size: 24px;
+    font-weight: 300;
+}
+.display span{
+    margin-right: 20px;
+}
+button{
+    appearance: none;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding: 15px;
+}
+button :hover{
+    opacity: 0.9;
+}
+.operators{
+   
+    display: flex;
+}
+.operators button{
+   color: white;
+   background-color: rgb(233, 6, 93);
+    flex: 1 1 0%;
+    font-weight: 700;
+}
+.digits{
+    display: flex;
+    flex-wrap: wrap;
+}
+.digits button{
+    background-color: black;
+    color: white;
+    flex:1 1 33.333%;
+    max-width: 33.333%;
+}
