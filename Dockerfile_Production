@@ -1,0 +1,15 @@
+FROM node as builder
+
+WORKDIR /app
+COPY package.json .
+
+RUN npm install
+COPY . .
+RUN npm run build
+
+FROM nginx:alpine
+
+COPY --from=builder /app/build /usr/share/nginx/html
+
+//build using
+//docker build -t 06081980/react-cal-app:nginx -f Dockerfile_Production .
